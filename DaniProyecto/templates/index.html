@@ -1,0 +1,159 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png">
+    <title>Learn-GO</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/lightbox/simpleLightbox.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/animate-css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/flaticon/flaticon.css' %}">
+    <!-- main css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link href="{% static 'fontawesome/css/all.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<!--================Header Menu Area =================-->
+<header class="header_area">
+    <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container box_1620">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <a class="navbar-brand logo_h"><img src="{{ STATIC_URL }}../static/img/logofinal.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+        </nav>
+    </div>
+</header>
+<!--================Header Menu Area =================-->
+
+<!--================Home Banner Area =================-->
+<section class="home_banner_area">
+    <div class="banner_inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="banner_content">
+                        <h2>LEARN - GO</h2>
+                        <p style="font-size:160%;">Plataforma estudiantil desarrollada con el fin de diagnosticar
+                            problemas
+                            relacionados con la
+                            prelectura en edades tempranas.</p>
+                        <p style="font-size:160%;">Facilitando a los docentes tomar medidas preventivas sobre dichos
+                            problemas, mejorando asi la
+                            calidad de la educación.</p>
+
+                        <a class="btn btn-danger btn-lg"
+                           href="{% url 'appproyecto:guardarCuestionario' %}"
+                           data-original-title="Click para llenar cuestionario"><i aria-hidden="true"></i>LLENAR
+                            CUESTIONARIO</a>
+                    </div>
+
+                </div>
+                <div class="col-lg-7">
+                    <div class="home_left_img">
+                        <img class="img-fluid" src="{{ STATIC_URL }}../static/img/banner/home-left-1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Home Banner Area =================-->
+
+<!--================Work Area =================-->
+<section class="work_area p_120">
+    <div class="container">
+        <div class="main_title">
+            <h2>Componentes</h2>
+        </div>
+        <div class="work_inner row">
+            <div class="col-lg-6 ">
+                <div class="work_item">
+                    <i class="lnr lnr-screen"></i>
+                    <h4>Sistema Experto</h4>
+                    <p align="justify">Enfocado principalmente en detectar los problemas que presentan los estudiantes
+                        en base a un test
+                        de diagnóstico que se centra en las principales actividades que un niño de 5 a 7 debería
+                        conocer, ademas brinda como resultado las actividades que se deberian
+                        reforzar mejorando asi la calidad de estudiantes.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="work_item">
+                    <i class="lnr lnr-code"></i>
+                    <h4>Prelectura</h4>
+                    <p align="justify">Módulo multiplataforma que brinda diversas actividades educativas para que los
+                        estudiantes puedan reforzar sus conocimientos, transformando totalmente la didáctica de
+                        enseñanza haciendo que los estudiantes se interesen por aprender a modo de juego.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Work Area =================-->
+
+<!--================Footer Area =================-->
+<footer class="footer_area p_120">
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="banner_content">
+                        <div class="f_title">
+                            <h2>Creador</h2>
+                        </div>
+                        <p>Pedro Loja Argudo</p>
+                        <p>Estudiante de la Universidad Politécnica Salesiana</p>
+                        <div class="f_title">
+                            <h2>Tutor</h2>
+                        </div>
+                        <p>PhD. Vladimir Robles Bykbaev</p>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="home_left_img">
+                        <img class="img-fluid" src="{{ STATIC_URL }}../static/img/logo-catedra.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--================End Footer Area =================-->
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="{% static '../static/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static '../static/js/popper.js' %}"></script>
+<script src="{% static '../static/js/bootstrap.min.js' %}"></script>
+<script src="{% static '../static/js/stellar.js' %}"></script>
+<script src="{% static '../static/vendor/lightbox/simpleLightbox.css' %}"></script>
+<script src="{% static '../static/vendor/nice-select/js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static '../static/vendor/isotope/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static '../static/vendor/isotope/isotope-min.js' %}"></script>
+<script src="{% static '../static/vendor/owl-carousel/owl.carousel.min.js' %}"></script>
+<script src="{% static '../static/js/jquery.ajaxchimp.min.js' %}"></script>
+<script src="{% static '../static/vendor/counter-up/jquery.waypoints.min.js' %}"></script>
+<script src="{% static '../static/vendor/counter-up/jquery.counterup.min.js' %}"></script>
+<script src="{% static '../static/js/mail-script.js' %}"></script>
+
+</body>
+</html>

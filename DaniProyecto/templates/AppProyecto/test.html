@@ -1,0 +1,317 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Learn - GO</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- Page level plugin CSS-->
+    <link href="{% static 'vendor/datatables/dataTables.bootstrap4.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static 'css/sb-admin.css' %}" rel="stylesheet">
+    <link href="{% static 'fontawesome/css/all.css' %}" rel="stylesheet">
+    <link href="{% static 'css/extra.css' %}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+
+    <a class="navbar-brand mr-1" href="{% url 'appproyecto:index' %}"><font
+            size="5"><span>&#9204</span>Regresar</font></a>
+</nav>
+
+<div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+
+    </ul>
+    <div id="content-wrapper">
+        <div class="container-fluid">
+            <div class="container">
+                <h1 class="h1 mb-2 text-gray-800" align="center"><i class="fas fa-tasks"></i>
+                    COMPRENSION DEL CUENTO "EL CÓNDOR Y LA PASTORCITA"</h1>
+                <br>
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <div class="container-fluid">
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <div class="alert alert-danger">
+                                        {{ message }}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                            <form method="post" class="user" action="{% url 'appproyecto:guardarCuestionario' %}"
+                                  autocomplete="off">
+                                {% csrf_token %}
+                                <div class="form-group row">
+                                    <div class="container">
+                                        <br>
+                                        <div class="">
+                                            <h3 align="center">Escriba su nombre y apellido correctamente</h3>
+                                            <br>
+                                            <input type="text" id="nombre" name="nombre" class="form-control"
+                                                   required="required">
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <div class="form-group">
+                                            <h3 align="center">¿En qué trabajaba el novio de la pastorcita?</h3>
+                                            <div class="table-responsive">
+                                                <table class="table" width="100%">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td align="center"><img
+                                                                src="{{ STATIC_URL }}../static/img/doctor.jpg">
+                                                            <div class="radio radio-sm">
+                                                                <input type="radio" name="p1"
+                                                                       id="p1r1" value="doctor"/>
+                                                                <label for="p1r1">Doctor</label>
+                                                            </div>
+                                                        </td>
+                                                        <td align="center"><img
+                                                                src="{{ STATIC_URL }}../static/img/agricultor.jpg">
+                                                            <div class="radio radio-sm">
+                                                                <input type="radio" name="p1"
+                                                                       id="p1r2" value="pastor"/>
+                                                                <label for="p1r2">Agricultor</label>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <br>
+                                            <br>
+
+                                            <h3 align="center">¿Que desayunaba la pastorcita?</h3>
+                                            <div class="table-responsive">
+                                                <table class="table" width="100%">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td align="center"><img
+                                                                src="{{ STATIC_URL }}../static/img/huevos.jpg">
+                                                            <div class="radio radio-sm">
+                                                                <input type="radio" name="p2"
+                                                                       id="p2r1" value="huevos"/>
+                                                                <label for="p2r1">Huevos</label>
+                                                            </div>
+                                                        </td>
+                                                        <td align="center"><img
+                                                                src="{{ STATIC_URL }}../static/img/sandwich.jpg">
+                                                            <div class="radio radio-sm">
+                                                                <input type="radio" name="p2"
+                                                                       id="p2r2" value="sanduches"/>
+                                                                <label for="p2r2">Sanduches</label>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <br>
+                                            <br>
+
+                                            <h3 align="center">¿A qué animales llevaba a pastar la pastorcita?</h3>
+                                            <div class="table-responsive">
+                                                <table class="table" width="100%">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td align="center"><img
+                                                                src="{{ STATIC_URL }}../static/img/cerdo.jpg">
+                                                            <div class="radio radio-sm">
+                                                                <input type="radio" name="p3"
+                                                                       id="p3r1" value="cerdos"/>
+                                                                <label for="p3r1">Cerdos</label>
+                                                            </div>
+                                                        </td>
+                                                        <td align="center"><img
+                                                                src="{{ STATIC_URL }}../static/img/ovejas.jpg">
+                                                            <div class="radio radio-sm">
+                                                                <input type="radio" name="p3"
+                                                                       id="p3r2" value="ovejas"/>
+                                                                <label for="p3r2">Ovejas</label>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <br>
+                                            <br>
+
+                                            <div class="">
+                                                <h3 align="center">¿Cuantos metros ascendió el cóndor en su vuelo?</h3>
+                                                <br>
+                                                <input type="text" id="p4" name="p4" class="form-control"
+                                                       required="required">
+                                            </div>
+
+                                            <br>
+                                            <br>
+
+                                            <h3 align="center">¿Qué otro título le pondrias al cuento?</h3>
+                                            <div class="radiobuttons">
+                                                <div class="d">
+                                                    <div class="radio radio-sm">
+                                                        <input type="radio" name="p5"
+                                                               id="p5r1" value="La pastorcita en las nubes"/>
+                                                        <label for="p5r1">La pastorcita en las nubes</label>
+                                                    </div>
+                                                </div>
+                                                <div class="d">
+                                                    <div class="radio radio-sm">
+                                                        <input type="radio" name="p5"
+                                                               id="p5r2" value="El poder del cóndor"/>
+                                                        <label for="p5r2">El poder del cóndor</label>
+                                                    </div>
+                                                </div>
+                                                <div class="d">
+                                                    <div class="radio radio-sm">
+                                                        <input type="radio" name="p5"
+                                                               id="p5r3" value="El cóndor secuestrador"/>
+                                                        <label for="p5r3">El cóndor secuestrador </label>
+                                                    </div>
+                                                </div>
+                                                <div class="d">
+                                                    <div class="radio radio-sm">
+                                                        <input type="radio" name="p5"
+                                                               id="p5r4"
+                                                               value="El amor entre el cóndor y la pastorcita"/>
+                                                        <label for="p5r4">El amor entre el cóndor y la
+                                                            pastorcita</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <br>
+                                            <br>
+
+                                            <h3 align="center">¿Porqué crees que la pastorcita se quedó con el
+                                                cóndor?</h3>
+                                            <div class="radiobuttons">
+                                                <div class="d">
+                                                    <div class="radio radio-sm">
+                                                        <input type="radio" name="p6"
+                                                               id="p6r1" value="Porque no era feliz en su trabajo"/>
+                                                        <label for="p6r1">Porque no era feliz en su trabajo</label>
+                                                    </div>
+                                                </div>
+                                                <div class="d">
+                                                    <div class="radio radio-sm">
+                                                        <input type="radio" name="p6"
+                                                               id="p6r2" value="Porque sus papás no la querían"/>
+                                                        <label for="p6r2">Porque sus papás no la querían</label>
+                                                    </div>
+                                                </div>
+                                                <div class="d">
+                                                    <div class="radio radio-sm">
+                                                        <input type="radio" name="p6"
+                                                               id="p6r3" value="Porque quería huir de su pueblo"/>
+                                                        <label for="p6r3">Porque quería huir de su pueblo</label>
+                                                    </div>
+                                                </div>
+                                                <div class="d">
+                                                    <div class="radio radio-sm">
+                                                        <input type="radio" name="p6"
+                                                               id="p6r4"
+                                                               value="Porque el cóndor la hacía feliz y se enamoró"/>
+                                                        <label for="p6r4">Porque el cóndor la hacía feliz y se
+                                                            enamoró</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <br>
+                                            <br>
+
+                                            <div class="">
+                                                <h3 align="center">¿Crees que la pastorcita es feliz con el señor cóndor
+                                                    ahora?</h3>
+                                                <br>
+                                                <input type="text" id="p7" name="p7" class="form-control"
+                                                       required="required">
+                                            </div>
+
+                                            <br>
+                                            <br>
+
+                                            <div class="">
+                                                <h3 align="center">¿Tú hubieras abandonado a tu familia igual que la
+                                                    pastorcita?</h3>
+                                                <br>
+                                                <input type="text" id="p8" name="p8" class="form-control"
+                                                       required="required">
+                                            </div>
+
+                                            <br>
+                                            <br>
+
+                                            <div align="center">
+                                                <button type="submit" class="btn btn btn-primary btn-user">Realizar
+                                                    Test
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright © Learn - GO 2019</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- /.content-wrapper -->
+</div>
+<!-- /#wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Bootstrap core JavaScript-->
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+<!-- Page level plugin JavaScript-->
+<script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script>
+<script src="{% static 'vendor/datatables/jquery.dataTables.js' %}"></script>
+<script src="{% static 'vendor/datatables/dataTables.bootstrap4.js' %}"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="{% static 'js/sb-admin.min.js' %}"></script>
+
+</body>
+
+</html>
